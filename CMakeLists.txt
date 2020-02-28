@@ -72,6 +72,8 @@ project(JSONCPP
         # IMPORTANT: also update the SOVERSION!!
         VERSION 1.9.2 # <major>[.<minor>[.<patch>[.<tweak>]]]
         LANGUAGES CXX)
+include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+conan_basic_setup()
 
 message(STATUS "JsonCpp Version: ${JSONCPP_VERSION_MAJOR}.${JSONCPP_VERSION_MINOR}.${JSONCPP_VERSION_PATCH}")
 set( JSONCPP_SOVERSION 22 )
